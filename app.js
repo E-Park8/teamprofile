@@ -82,7 +82,7 @@ const newManager = (employee) => {
           {
               type: 'input',
               name: 'officeNumber',
-              message: 'Enter Manager office number'
+              message: 'Enter Manager office number:'
           }
       ])
           .then (manager => {
@@ -137,9 +137,8 @@ const addEmployee = () => {
                 newEmployee()
                 break
             case 'Done':
-                console.log(select.select)
-                // const html = render(employees)
-                // fs.writeFileSync()
+                fs.writeFileSync(outputPath, render(employees))
+                break
         }
     })
     .catch(err => console.log(err))
